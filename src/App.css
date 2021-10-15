@@ -1,0 +1,229 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+
+main-text,
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  font-size: 16px;
+  background-color: #EDF6E5;
+  overflow:auto;
+  /* background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png); */
+}
+
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: #08c;
+}
+button:hover {
+  color: #04c;
+}
+
+.App {
+  display: flex;
+}
+
+/* SIDEBAR STYLES */
+
+.app-sidebar {
+  width: 25%;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+}
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: end;
+  padding: 25px;
+  padding-top:68px;
+}
+
+.app-title-container-wrapper{
+  display: flex;
+  align-items: center;
+}
+.app-sidebar-header h1 {
+  margin: 0;
+}
+
+.app-sidebar-notes {
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
+}
+.app-sidebar-note {
+  padding: 15px;
+  cursor: pointer;
+}
+.sidebar-note-title {
+  display: flex;
+  justify-content: end;
+}
+.app-sidebar-note button {
+  color: crimson;
+}
+.app-sidebar-note p {
+  margin: 10px 0;
+}
+.app-sidebar-note small {
+  /* display: block; */
+  color: #999;
+  display: flex;
+    /* justify-content: end; */
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.app-sidebar-note:hover {
+  background: #edf6e5;
+}
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: #B5EAEA;
+  color: white;
+}
+
+/* NOTE EDITOR/PREVIEW (MAIN) STYLES */
+
+.app-main {
+  width: 75%;
+  height: 100vh;
+}
+
+.app-main-text-area{
+  width: 100%;
+  height: 100%;
+}
+.app-main-note-edit,
+.app-main-note-preview {
+  height: 50vh;
+}
+
+.no-active-note {
+  width: 75%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: #999;
+}
+
+/* Editing */
+.app-main-note-edit {
+  padding: 25px;
+  padding-top: 5px;
+}
+
+.app-main-note-edit input,
+textarea {
+  display: block;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  width: 100%;
+  /* height: calc(50vh - 130px); */
+  height: 85vh;
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2rem;
+}
+
+/* Preview */
+.app-main-note-preview {
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.preview-title {
+  padding: 25px 25px 0 25px;
+  margin: 0;
+}
+
+.markdown-preview {
+  padding: 0 25px 25px 25px;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.delete-icon {
+  width: 22px;
+}
+
+.text-area:focus {
+  outline: none !important;
+  border:1px solid #B5EAEA;
+}
+
+.text-area::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+/* .text-area::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+} */
+
+.text-area::-webkit-scrollbar-thumb {
+  background-color: #F38BA0;
+  /* outline: 1px solid slategrey; */
+}
+
+.add-button{
+  color: #F38BA0;
+}
+
+.download-button{
+  display: flex;
+  /* flex-direction: column; */
+    justify-content: end;
+    padding-right: 45px;
+    /* padding-top: 25px; */
+}
+
+
+.header-buttons{
+  margin: 5px;
+}
+
+.app-main-title{
+  font-family: 'PT Serif', serif;
+  color: #F38BA0;
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    margin-left: 25px;
+    /* margin-top: 25px; */
+}
+
+.app-title-container{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.title-logo{
+  width:100px;
+  margin-left: 25px;
+}
+
+.app-app-sidebar-textbody{
+  word-wrap: break-word;
+}
