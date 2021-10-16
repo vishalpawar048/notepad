@@ -4,6 +4,7 @@ import "./App.css";
 import Headers from "./main/Headers";
 import Main from "./main/Main";
 import Sidebar from "./sidebar/Sidebar";
+import analytics from "./firebase"
 
 function App() {
   const [notes, setNotes] = useState(
